@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.866),rgba(0, 0, 0, 0.881)), url(pexels-ella-olsson-1640770.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+html {
+    scroll-behavior: smooth;
+  }
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav img{
+    margin: 30px 0 0 100px;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    animation: moveInLogo .5s ease-in-out 1s;
+}
+nav .navigation ul{
+    list-style: none;
+    display: inline-block;
+    margin-right: 200px;
+    margin-top: 50px;
+}
+nav .navigation ul li{
+    display: inline-block;
+    margin-right: 50px;
+}
+.navigation ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    transition:  all .3s linear;
+}
+.navigation ul li a:hover{
+    color: brown;
+}
+h1.main-heading{
+    font-family: 'Montserrat','poppins', sans-serif;
+    text-align: center;
+    animation: moveInRight 1s ease-in-out ;
+}
+.video{
+    max-width: 60%;
+    margin: 50px auto 50px auto;
+}
+.video video{
+    width: 100%;
+}
+.button{
+   justify-content: center;
+   text-align: center;
+}
+.button .btn{
+   animation: moveInDown 1s ease-in-out .70s;
+   animation-fill-mode: backwards;
+   border: 1px solid black;
+   padding: 10px 20px;
+   background: black;
+   color: white;
+   font-family: 'Montserrat','poppins', sans-serif;
+   font-weight: bolder;
+   transform:  all .3s ease-in-out;
+}
+.btn a{
+    text-decoration: none;
+}
+.btn a i{
+    margin-left: 10px;
+}
+ .btn a:hover{
+    color: white;
+}
+
+
+@keyframes moveInRight{
+    0%{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    80%{
+        transform: translateX(10px);
+   
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes moveInDown{
+    0%{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    80%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes moveInLogo{
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    /* 80%{
+        transform: translateX(10px);
+   
+    } */
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* CSS FOR DETAIL */
+
+.detail{
+    width: 90%;
+    height: auto;
+    background-color: whitesmoke;
+    margin: 150px auto 0 auto;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.detail .heading{
+    width: 90%;
+    position: absolute;
+    top: -40px;
+    background: white;
+    padding-bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'poppins', sans-serif;
+    text-align: center;
+}
+.discription {
+    padding: 30px 30px;
+    font-family: 'poppins', sans-serif;
+}
+.footer{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    background-color: rgb(44, 44, 44);
+}
+.whole{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icons{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.icons i{
+    margin-right: 10px;
+}
+.icons a:hover{
+    color: rgb(77, 77, 77);
+}
+.mini-icons a{
+    text-decoration: none;
+    color: white;
+}
+.mini-icons i{
+    font-size: 30px;
+    margin: 15px;
+}
+.infor a{
+    text-decoration: none;
+    margin: 30px;
+    font-size: 20px;
+    font-family: 'poppins', sans-serif;
+    color:aliceblue;
+}
+.infor a:hover{
+    color: rgb(77, 77, 77);
+}
+
+@media only screen and (max-width:450px) {
+    nav{
+        width: 100%;
+    }
+    nav img{
+        margin: 30px 0 0 30px;
+    }
+    nav .navigation ul{
+        margin-right: 20px;
+    }
+    nav .navigation ul li:first-child{
+        display: none;
+    }
+    h1.main-heading{
+        padding: 30px 10px 10px 10px;
+        font-size: 25px;
+    }
+    .video{
+        max-width: 90%;
+    }
+    .detail .heading{
+        font-size: 30px;
+    }
+    .whole{
+        width: 100%;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    .icons{
+        margin-left: 10%;
+    }
+    .mini-icons{
+        justify-content: center;
+        align-items: center;
+    }
+    .infor{
+        text-align: center;
+    }
+    .infor a{
+        text-decoration: none;
+        margin: 10px;
+        font-size: 16px;
+        font-family: 'poppins', sans-serif;
+        color:aliceblue;
+    }
+}
